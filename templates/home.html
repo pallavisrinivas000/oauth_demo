@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OAuth Demo</title>
+</head>
+<body>
+    {% if user %}
+        <h2>Welcome, {{ user.login }}!</h2>
+        <img src="{{ user.avatar_url }}" width="100"><br>
+        <a href="/logout">Logout</a>
+    {% else %}
+        <h2>You are not logged in</h2>
+        <a href="/login">Login with GitHub</a>
+    {% endif %}
+</body>
+</html>
